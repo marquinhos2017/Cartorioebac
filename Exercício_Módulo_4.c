@@ -98,6 +98,7 @@ int main()
 {
     int opcao=0;
     int laco=1;
+    int aux=1;
 
   
     for(laco=1;laco=1;)
@@ -111,7 +112,7 @@ int main()
         printf("\t1 - Registrar nomes\n");
         printf("\t2 - Consultar nomes\n");
         printf("\t3 - Deletar nomes\n");
-         printf("\t4 - Sair do sistema\n\n");
+        printf("\t4 - Sair do sistema\n\n");
         printf("Esse software e de livre uso dos alunos\n");
 
         scanf("%d",&opcao);
@@ -122,6 +123,16 @@ int main()
         {
             case 1:
             registro();
+            for(aux=1;aux=1;){
+                printf("Adicionar outro usuario ? (Y = 1 / N = 0)");
+                scanf("%d",&aux);
+                if(aux==0){
+                    break;
+                }else{
+                    registro();
+                }
+            }
+            
             break;
 
             case 2:
